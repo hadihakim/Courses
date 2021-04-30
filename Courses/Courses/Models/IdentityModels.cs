@@ -20,6 +20,11 @@ namespace Courses.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Major> Majors { get; set; }
+        public DbSet<Admission> Admissions { get; set; }
+        public DbSet<Student> Students { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

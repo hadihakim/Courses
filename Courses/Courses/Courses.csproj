@@ -173,9 +173,71 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104300743347_InitialModel.cs" />
+    <Compile Include="Migrations\202104300743347_InitialModel.Designer.cs">
+      <DependentUpon>202104300743347_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301026359_AddCourseModel.cs" />
+    <Compile Include="Migrations\202104301026359_AddCourseModel.Designer.cs">
+      <DependentUpon>202104301026359_AddCourseModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301036444_AddDepartmentModel.cs" />
+    <Compile Include="Migrations\202104301036444_AddDepartmentModel.Designer.cs">
+      <DependentUpon>202104301036444_AddDepartmentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301039400_SeedDepartmentModel.cs" />
+    <Compile Include="Migrations\202104301039400_SeedDepartmentModel.Designer.cs">
+      <DependentUpon>202104301039400_SeedDepartmentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301054042_AddForeignKeyToCourseModel.cs" />
+    <Compile Include="Migrations\202104301054042_AddForeignKeyToCourseModel.Designer.cs">
+      <DependentUpon>202104301054042_AddForeignKeyToCourseModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301056245_SeedCourseModel.cs" />
+    <Compile Include="Migrations\202104301056245_SeedCourseModel.Designer.cs">
+      <DependentUpon>202104301056245_SeedCourseModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301124125_AddMajorModel.cs" />
+    <Compile Include="Migrations\202104301124125_AddMajorModel.Designer.cs">
+      <DependentUpon>202104301124125_AddMajorModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301125392_SeedMajorModel.cs" />
+    <Compile Include="Migrations\202104301125392_SeedMajorModel.Designer.cs">
+      <DependentUpon>202104301125392_SeedMajorModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301137425_AddPKMajorModel.cs" />
+    <Compile Include="Migrations\202104301137425_AddPKMajorModel.Designer.cs">
+      <DependentUpon>202104301137425_AddPKMajorModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301147147_AddAdmissionModel.cs" />
+    <Compile Include="Migrations\202104301147147_AddAdmissionModel.Designer.cs">
+      <DependentUpon>202104301147147_AddAdmissionModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301153301_YearByteToInt.cs" />
+    <Compile Include="Migrations\202104301153301_YearByteToInt.Designer.cs">
+      <DependentUpon>202104301153301_YearByteToInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301154103_SeedAdmissionModel.cs" />
+    <Compile Include="Migrations\202104301154103_SeedAdmissionModel.Designer.cs">
+      <DependentUpon>202104301154103_SeedAdmissionModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301205131_AddStudentModel.cs" />
+    <Compile Include="Migrations\202104301205131_AddStudentModel.Designer.cs">
+      <DependentUpon>202104301205131_AddStudentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301208078_SeedStudentModel.cs" />
+    <Compile Include="Migrations\202104301208078_SeedStudentModel.Designer.cs">
+      <DependentUpon>202104301208078_SeedStudentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Admission.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Department.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Major.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -251,6 +313,50 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104300743347_InitialModel.resx">
+      <DependentUpon>202104300743347_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301026359_AddCourseModel.resx">
+      <DependentUpon>202104301026359_AddCourseModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301036444_AddDepartmentModel.resx">
+      <DependentUpon>202104301036444_AddDepartmentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301039400_SeedDepartmentModel.resx">
+      <DependentUpon>202104301039400_SeedDepartmentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301054042_AddForeignKeyToCourseModel.resx">
+      <DependentUpon>202104301054042_AddForeignKeyToCourseModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301056245_SeedCourseModel.resx">
+      <DependentUpon>202104301056245_SeedCourseModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301124125_AddMajorModel.resx">
+      <DependentUpon>202104301124125_AddMajorModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301125392_SeedMajorModel.resx">
+      <DependentUpon>202104301125392_SeedMajorModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301137425_AddPKMajorModel.resx">
+      <DependentUpon>202104301137425_AddPKMajorModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301147147_AddAdmissionModel.resx">
+      <DependentUpon>202104301147147_AddAdmissionModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301153301_YearByteToInt.resx">
+      <DependentUpon>202104301153301_YearByteToInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301154103_SeedAdmissionModel.resx">
+      <DependentUpon>202104301154103_SeedAdmissionModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301205131_AddStudentModel.resx">
+      <DependentUpon>202104301205131_AddStudentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301208078_SeedStudentModel.resx">
+      <DependentUpon>202104301208078_SeedStudentModel.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
