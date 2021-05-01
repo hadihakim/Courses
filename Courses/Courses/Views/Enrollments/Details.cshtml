@@ -1,0 +1,53 @@
+﻿@model Courses.ViewModels.EmpStudViewModel
+
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.FirstName)
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.Student.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.course)
+        </th>
+    </tr>
+
+
+    <tr>
+        <th>
+            @Html.DisplayFor(item => item.Student.FirstName)
+        </th>
+
+
+        <th>
+            @Html.DisplayFor(item => item.Student.LastName)
+        </th>
+        </tr>
+        @* @foreach (var item in Model)
+        {
+
+            <td>
+                @Html.DisplayFor(item => item.course.CourseName)
+            </td>
+
+            <
+            }
+        </tr>*/*@
+
+
+
+
+
+
+</table>
+

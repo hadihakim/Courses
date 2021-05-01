@@ -9,6 +9,7 @@ namespace Courses.Models
     public class Student
     {
         [Key]
+        
         public byte Id { get; set; }
 
         [StringLength(60)]

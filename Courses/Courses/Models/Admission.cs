@@ -11,6 +11,7 @@ namespace Courses.Models
         [Key]
         [StringLength(9)]
         [Required]
+
         public string AdmissionTermCode { get; set; }
         [StringLength(9)]
         [Required]

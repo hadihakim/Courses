@@ -42,7 +42,8 @@
         @Html.DisplayFor(modelItem => item.AdmissionTermCode)
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.FirstName)
+        @Html.ActionLink(item.FirstName, "Details", "Enrollments", new { id = item.Id }, null)
+        @*@Html.DisplayFor(modelItem => item.FirstName)*@
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.LastName)

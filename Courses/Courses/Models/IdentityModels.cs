@@ -25,6 +25,7 @@ namespace Courses.Models
         public DbSet<Major> Majors { get; set; }
         public DbSet<Admission> Admissions { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Enrollment> Enrollments{ get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
