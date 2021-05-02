@@ -8,10 +8,19 @@
 <h2>Registered Courses</h2>
 
 
-
+@{
+    int i = 0;
+}
 @foreach (var item in Model)
 {
-<h3>Student Name:  @Html.DisplayFor(modelItem => item.Student.FirstName) @Html.DisplayFor(modelItem => item.Student.LastName)</h3>
+    if (i<1)
+    {
+        <h3>Student Name:  @Html.DisplayFor(modelItem => item.Student.FirstName) @Html.DisplayFor(modelItem => item.Student.LastName)</h3>
+        i++;
+
+    }
+
+
 
 }
 
@@ -22,7 +31,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Course.CourseName)
         </th>
-        
+
         <th>
             @Html.DisplayNameFor(model => model.TermCode)
         </th>
@@ -49,7 +58,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Course.CourseName)
                 </td>
-               
+
                 <td>
                     @Html.DisplayFor(modelItem => item.TermCode)
                 </td>
@@ -65,11 +74,11 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.PaymentIndicator)
                 </td>
-               @* <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                </td>*@
+                @* <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>*@
             </tr>
         }
 
