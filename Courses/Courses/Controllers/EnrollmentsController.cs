@@ -80,28 +80,21 @@ namespace Courses.Controllers
             }
             
             var student = db.Students.SingleOrDefault(c => c.Id == id); 
-            var emp = db.Enrollments.Include(c=>c.Course).ToList();
+           // var emp = db.Enrollments.ToList();
+            var emp = db.Enrollments.Where(x => x.StudentId == id).Include(c=>c.Course);
             
-
-
-
-
-
-
             
-            var viewModel = new EmpStudViewModel
+            /*var viewModel = new EmpStudViewModel
             {
                 Student = student,
                 Enrollment = emp
                 
-            };
+            };*/
 
-
-
-            if (student == null)
+           /* if (student == null)
             {
                 return HttpNotFound();
-            }
+            }*/
             return View(emp);
         }
 
