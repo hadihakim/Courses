@@ -78,21 +78,31 @@ namespace Courses.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var students = db.Students.Find(id);
-            var courses = db.Courses.ToList();
+            
+            var student = db.Students.SingleOrDefault(c => c.Id == id); 
+            var emp = db.Enrollments.Include(c=>c.Course).ToList();
+            
+
+
+
+
+
+
+            
             var viewModel = new EmpStudViewModel
             {
-                courses = courses,
+                Student = student,
+                Enrollment = emp
+                
+            };
 
-                Student = students
 
-        };
 
-            if (viewModel == null)
+            if (student == null)
             {
                 return HttpNotFound();
             }
-            return View(viewModel);
+            return View(emp);
         }
 
         /* [HttpPost]

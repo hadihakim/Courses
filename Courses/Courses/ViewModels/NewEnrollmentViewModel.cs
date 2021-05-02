@@ -9,7 +9,7 @@ namespace Courses.ViewModels
 {
     public class NewEnrollmentViewModel
     {
-        internal DbSet<Enrollment> enrollments;
+       
 
         public IEnumerable<Admission> admissions{ get; set; }
 

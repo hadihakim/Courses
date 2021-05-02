@@ -9,9 +9,9 @@ namespace Courses.ViewModels
 {
     public class EmpStudViewModel
     {
-       public Enrollment Enrollment { get; set; }
+        public List<Enrollment> Enrollment { get; set; }
         public Student Student { get; set; }
-        public IEnumerable<Course> course { get; set; }
+        public List<Course> course { get; set; }
 
     }
 }
