@@ -10,8 +10,10 @@ namespace Courses.Models
     {
         [Key]
         public int DepartmentId { get; set; }
+
         [Required]
         [StringLength(60)]
+        [Display(Name = "Department Name")]
         public String DepartmentName { get; set; }
 
     }

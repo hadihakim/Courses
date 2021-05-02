@@ -14,12 +14,15 @@ namespace Courses.Models
 
         [StringLength(60)]
         [Required]
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         [StringLength(60)]
         [Required]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
+        [Display(Name = "Date Of Birth")]
         public DateTime DateOfBirth { get; set; }
 
         public Major Major { get; set; }
@@ -27,6 +30,7 @@ namespace Courses.Models
 
         public Admission Admission { get; set; }
         [StringLength(9)]
+        [Display(Name = "Admission Term Code")]
         public string AdmissionTermCode { get; set; }
     }
 }

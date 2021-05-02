@@ -13,8 +13,10 @@ namespace Courses.Models
         [Key]
         public byte CourseId { get; set; }
         [Required]
+        [Display(Name = "Course Name")]
         public string CourseName { get; set; }
         public int Credits { get; set; }
+
         
         public Department Department { get; set; }
         public int DepartmentId { get; set; }
